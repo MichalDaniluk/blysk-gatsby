@@ -24,7 +24,7 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <>
+    <div class="wrapper">
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         style={{
@@ -36,12 +36,63 @@ const Layout = ({ children }) => {
       >
         <main>{children}</main>
         <footer>
-          © {new Date().getFullYear()}, Built with
-          {` `}
-          <a href="https://www.gatsbyjs.org">Gatsby</a>
+          <div id="st">
+            <div>
+              Wszytkie prawa zastrzeżonie. Copyright © 2015 r. “Poligrafiablysk
+              - Rafał Cienciała” Kopiowanie bez zgody właściciela serwisu surowo
+              zabronione. Strona korzysta z plików Cookie, przebywając tutaj
+              akceptujesz to. Projekt i wykonanie :{" "}
+              <a
+                href="http://bluestudio.pl/"
+                target="_blank"
+                title="strony internetowe"
+              >
+                Bluestudio.pl - strony internetowe
+              </a>
+              <br />
+              Polecamy :{" "}
+              <a
+                href="http://ckks.pl/"
+                target="_blank"
+                title="kursy instruktorskie"
+              >
+                CKKS - kursy instruktorskie
+              </a>
+              <br />
+              <span class="oc" itemscope="" itemtype="http://schema.org/Review">
+                <span
+                  itemprop="itemReviewed"
+                  itemscope=""
+                  itemtype="http://schema.org/Thing"
+                >
+                  <span itemprop="name"></span>-{" "}
+                </span>
+                <span
+                  itemprop="author"
+                  itemscope=""
+                  itemtype="http://schema.org/Person"
+                >
+                  <span itemprop="name">Klienci</span>-{" "}
+                </span>
+                <span
+                  itemprop="reviewRating"
+                  itemscope=""
+                  itemtype="http://schema.org/Rating"
+                >
+                  Ocena:<span itemprop="ratingValue">10</span>/{" "}
+                  <span itemprop="bestRating">10</span>
+                </span>
+              </span>
+              <script
+                async=""
+                src="//www.google-analytics.com/analytics.js"
+              ></script>
+              <script async="" src="index_pliki/analytics.js"></script>
+            </div>
+          </div>
         </footer>
       </div>
-    </>
+    </div>
   )
 }
 
